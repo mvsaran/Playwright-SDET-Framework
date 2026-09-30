@@ -1,0 +1,46 @@
+{
+  "name": "playwright-sdet-framework",
+  "version": "1.0.0",
+  "description": "Production-grade Playwright SDET Framework – TypeScript + API + UI + CI",
+  "author": "SDET Team",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:api": "playwright test --project=api",
+    "report": "playwright show-report",
+    "allure": "allure serve reports/allure/results",
+    "allure:generate": "allure generate reports/allure/results --clean -o reports/allure/report",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7",
+    "allure-playwright": "^3.0.0-beta.3",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^1.6.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  }
+}
